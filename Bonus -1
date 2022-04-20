@@ -1,0 +1,8 @@
+Here I have discussed only my thouught process :
+
+1)  First covert the given image into binary img by applying threshold 
+2) Find contours 
+3 ) Find shape of the contours by the cv2.approxPolyDP() function
+4) Then find the coordinated of the contours by .ravel() function
+5) Then we have our coordinates , we can find the angle and distance by our coordinates and contour coordinates 
+6) By that angle vs disttance graph can be drawn.
