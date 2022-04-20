@@ -1,5 +1,6 @@
 # check for lowest among m and n
 # using binary search
+
 import math
 dim = input(" Enter the dimension as row and columns : ").split()
 dim = list(int(j) for j in dim)
@@ -22,10 +23,13 @@ row = []
 for j in range(mini):
     if index == 0:
         k_index = [j,-1]
-        if Mat[j][0] <= k <= Mat[j][maxi - 1]:
-            row = Mat[j]
+        
+        if Mat[j][0] <= k <= Mat[j][maxi - 1]:    # concept here if the elemnts in matix are increasing ,
+            row = Mat[j]                          # Then we can check if the element k presents by checking the last values of the row / column
             break
+            
     if index == 1:
+        
         if Mat[0][j] <= k <= Mat[maxi-1][j]:
             k_index = [-1, j]
             for g in range(maxi):
@@ -50,7 +54,7 @@ if row != []:
             print(f'The element {k} is found ')              # using math.ceil(c) and floor because it is not continuous
             k_index[k_index.index(-1)] = math.floor(c)
             print(f'Index of the element is {k_index}')      # As index num is not continuous so we are checking also the index
-            break
+            break                                            # Here we considering the matrix is somewhat smaller 
 
         if row[math.ceil(c)] > k:
             b = math.ceil(c)
