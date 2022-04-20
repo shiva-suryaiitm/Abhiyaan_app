@@ -1,0 +1,4 @@
+<launch>
+        <node name="talker" pkg="starter_package" type="publisher.py" ns="h"/>
+        <node name="listener" pkg="starter_package" type="subscriber2.py" output="screen" ns="h"/>
+</launch>
